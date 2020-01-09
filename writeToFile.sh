@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 fileLocation="/home/vikram/.customScripts/terminalStatePreserver/terminalState.txt"
 
