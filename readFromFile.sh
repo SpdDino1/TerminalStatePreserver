@@ -9,7 +9,7 @@ then
     readarray -t workingDirectories < $fileLocation
 
     # Delete stateFile
-    rm $fileLocation
+    rm $fileLocation &> /dev/null
 
     arrayLength=${#workingDirectories[@]}
 
@@ -17,7 +17,7 @@ then
     index=1
     while [ $index -lt $arrayLength ]
     do  
-        pantheon-terminal -w "${workingDirectories[index]}"
+        pantheon-terminal -w "${workingDirectories[index]}" &> /dev/null
         ((index++))
     done
     
